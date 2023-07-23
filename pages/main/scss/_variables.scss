@@ -6,6 +6,8 @@ $navLink-active: rgba(250, 250, 250, 1);
 $navLink-hover: rgba(250, 250, 250, 1);
 $navLink-border: rgba(241, 205, 179, 1);
 
+$footer-link:rgba(241, 205, 179, 1);
+
 $burgerBackground: rgba(41, 41, 41, 1);
 
 $mainTitle: rgba(255, 255, 255, 1);
@@ -45,6 +47,7 @@ $donationBackground: rgba(246, 246, 246, 1);
   color: $color;
   margin-block-start: 0em;
   margin-block-end: 0em;
+  letter-spacing: 0.14rem;
 }
 
 @mixin header3-mobile {
