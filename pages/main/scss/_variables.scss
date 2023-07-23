@@ -17,7 +17,10 @@ $buttonBackground-hover: rgba(253, 220, 196, 1);
 
 $header3: rgba(84, 84, 84, 1);
 $header4: rgba(84, 84, 84, 1);
+$header5: rgba(84, 84, 84, 1);
+$paragraph-S: rgba(178, 178, 178, 1);
 
+$donationBackground: rgba(246, 246, 246, 1);
 //mixin
 @mixin header2($fz: 2.93333rem, $ffam: Georgia, $fw: 400, $lh: 3.81333rem) {
   font-size: $fz;
@@ -70,12 +73,43 @@ $header4: rgba(84, 84, 84, 1);
   letter-spacing: 0.1rem;
 }
 
+@mixin header5 {
+  font-family: Georgia;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%; /* 1.1rem */
+  letter-spacing: 0.06rem;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  color: $header5;
+}
+
+@mixin header5-mobile {
+  font-family: Georgia;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; /* 1.6rem */
+}
+
 @mixin paragraph-L($fz: 1rem, $ffam: Arial, $fw: 400, $lh: 1.6rem) {
   font-size: $fz;
   font-family: $ffam;
   font-weight: $fw;
   line-height: $lh;
   color: rgba(76, 76, 76, 1);
+}
+
+@mixin paragraph-S {
+  font-family: Arial;
+  font-size: 0.8rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 150%; /* 1.2rem */
+  color: $paragraph-S;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
 }
 
 @mixin button(
