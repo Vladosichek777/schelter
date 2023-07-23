@@ -16,6 +16,7 @@ $buttonBackground-normal: rgba(241, 205, 179, 1);
 $buttonBackground-hover: rgba(253, 220, 196, 1);
 
 $header3: rgba(84, 84, 84, 1);
+$header4: rgba(84, 84, 84, 1);
 
 //mixin
 @mixin header2($fz: 2.93333rem, $ffam: Georgia, $fw: 400, $lh: 3.81333rem) {
@@ -23,6 +24,50 @@ $header3: rgba(84, 84, 84, 1);
   font-family: $ffam;
   font-weight: $fw;
   line-height: $lh;
+}
+
+@mixin header3(
+  $fz: 2.33333rem,
+  $ffam: Georgia,
+  $fw: 400,
+  $lh: 3.03333rem,
+  $let-spac: 0.14rem,
+  $color: $header3
+) {
+  font-size: $fz;
+  font-family: $ffam;
+  font-weight: $fw;
+  line-height: $lh;
+  letter-spacing: $let-spac;
+  color: $color;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+@mixin header3-mobile {
+  font-size: 1.66667rem;
+  font-family: Georgia;
+  font-weight: 400;
+  line-height: 130%;
+  letter-spacing: 0.1rem;
+}
+
+@mixin header4 {
+  font-family: Georgia;
+  font-size: 1.33333rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 115%; /* 1.53333rem */
+  letter-spacing: 0.08rem;
+  color: $header4;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+@mixin header4-mobile {
+  font-size: 1.66667rem;
+  line-height: 130%; /* 2.16667rem */
+  letter-spacing: 0.1rem;
 }
 
 @mixin paragraph-L($fz: 1rem, $ffam: Arial, $fw: 400, $lh: 1.6rem) {
@@ -59,27 +104,4 @@ $header3: rgba(84, 84, 84, 1);
   font-weight: $fw;
   line-height: $lh;
   letter-spacing: $let-spac;
-}
-
-@mixin header3(
-  $fz: 2.33333rem,
-  $ffam: Georgia,
-  $fw: 400,
-  $lh: 3.03333rem,
-  $let-spac: 0.14rem,
-  $color: $header3
-) {
-  font-size: $fz;
-  font-family: $ffam;
-  font-weight: $fw;
-  line-height: $lh;
-  letter-spacing: $let-spac;
-  color: $color;
-}
-@mixin header3-mobile {
-  font-size: 1.66667rem;
-  font-family: Georgia;
-  font-weight: 400;
-  line-height: 130%;
-  letter-spacing: 0.1rem;
 }
