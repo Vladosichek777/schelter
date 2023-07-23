@@ -1,0 +1,113 @@
+.header {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &-title {
+    display: block;
+    text-decoration: none;
+  }
+
+  &-title__title {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    color: $logoTitle;
+    margin-bottom: 0.67rem;
+    font-family: Georgia;
+    font-size: 2.13333rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%; /* 2.34667rem */
+    letter-spacing: 0.128rem;
+  }
+
+  &-title__subtitle {
+    font-size: 0.86667rem;
+    font-family: Arial;
+    letter-spacing: 0.08667rem;
+    font-weight: 400;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    color: #ffffff;
+  }
+
+  &-nav {
+    &__burger {
+      display: none;
+    }
+    &__list {
+      margin-block-start: 0em;
+      margin-block-end: 0em;
+      padding-inline-start: 0;
+      display: flex;
+      li {
+        list-style: none;
+
+        &:not(:last-child) {
+          margin-right: 2.33rem;
+        }
+      }
+    }
+
+    &__link {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1rem;
+      line-height: 1.6rem;
+      text-decoration: none;
+      color: $navLink-normal;
+      display: inline-block;
+
+      &--active {
+        border-bottom: 0.2rem solid $navLink-border;
+        color: $navLink-active;
+      }
+      &:hover {
+        color: $navLink-hover;
+      }
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .header-nav {
+    display: none;
+
+    &__burger {
+      transition: all 0.3s;
+      display: block;
+    }
+  }
+}
+
+.header-nav--open {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: $burgerBackground;
+  min-height: 100vh;
+  min-width: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  ul.header-nav__list {
+    flex-direction: column;
+    gap: 3rem;
+
+    :not(:last-child) {
+      margin-right: 0;
+    }
+  }
+
+  a.header-nav__link {
+    font-size: 2.13333rem;
+    line-height: 160%; /* 3.41333rem */
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.header-nav__burger--active {
+  transform: rotate(90deg);
+  transition: all 0.3s;
+}

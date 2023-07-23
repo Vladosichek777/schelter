@@ -1,0 +1,11 @@
+.title h3 {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  @include header3;
+}
+
+@media (max-width: 350px) {
+  .title h3 {
+    @include header3-mobile;
+  }
+}

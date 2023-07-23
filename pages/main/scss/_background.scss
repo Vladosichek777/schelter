@@ -1,0 +1,16 @@
+.main-background {
+  min-height: 100vh;
+  background-image: url(../../../assets/images/start-screen-gradient-background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+@media (max-width: 330px) {
+  .main-background {
+    min-height: 54.866rem;
+    padding-left: 0.67rem;
+    padding-right: 0.67rem;
+  }
+}
