@@ -4,12 +4,16 @@
   gap: 8rem;
   padding-top: 5.33rem;
   padding-bottom: 6.67rem;
+  align-items: center;
+  padding-left: 2.67rem;
+  padding-right: 2.67rem;
 
   &-info {
     max-width: 28.66667rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    min-height: 25.33rem;
+    row-gap: 1.67rem;
 
     &__title {
       max-width: 24.66667rem;
@@ -51,7 +55,7 @@
 
 @media (max-width: 350px) {
   .about {
-    gap: 2.8rem;
+    row-gap: 2.8rem;
     &-picture {
       text-align: center;
       &__img {

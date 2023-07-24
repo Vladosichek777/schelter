@@ -80,6 +80,13 @@
   }
 }
 
+@media (max-width: 400px) {
+  .header {
+    max-width: 18.66rem;
+    margin:  0 auto;
+  }
+}
+
 .header-nav--open {
   position: absolute;
   top: 0;

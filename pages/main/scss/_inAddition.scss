@@ -10,7 +10,7 @@
     margin: 0 auto;
     padding-top: 5.33rem;
     padding-bottom: 6.67rem;
-
+    align-items: center;
     &__img {
       &-item {
         display: block;
@@ -21,7 +21,8 @@
     &__info {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      // justify-content: space-between;
+      row-gap: 1.33rem;
       max-width: 25.33rem;
 
       &__title {

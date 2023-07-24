@@ -2,7 +2,7 @@
   background-image: url(../../../assets/images/footer-background.png);
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 2.67rem;
+  padding: 2.67rem 2.67rem 0 2.67rem;
   &-inner {
     display: flex;
     justify-content: space-between;
@@ -15,12 +15,14 @@
     justify-content: flex-start;
     row-gap: 2.67rem;
     max-width: 18.6rem;
+    padding-top: 1.07rem;
     &__title {
       @include header3;
       color: #ffffff;
     }
     &__email {
       margin-left: 50px;
+      min-height: 2.1333rem;
       @include header4;
       color: $footer-link;
       text-decoration: none;
@@ -36,6 +38,7 @@
     &__tel {
       @include header4;
       margin-left: 50px;
+      min-height: 2.1333rem;
       color: $footer-link;
       text-decoration: none;
       position: relative;
@@ -54,6 +57,7 @@
     justify-content: flex-start;
     row-gap: 2.27rem;
     max-width: 20.2rem;
+    padding-top: 1.07rem;
     &__title {
       @include header3;
       color: #ffffff;
@@ -61,6 +65,7 @@
     &__first {
       display: block;
       margin-left: 50px;
+      min-height: 2.1333rem;
       @include header4;
       color: $footer-link;
       text-decoration: none;
@@ -78,6 +83,7 @@
       @include header4;
       color: $footer-link;
       text-decoration: none;
+      min-height: 2.1333rem;
       position: relative;
       &::before {
         position: absolute;
@@ -91,10 +97,18 @@
 
 @media (max-width: 1000px) {
   .footer {
+    padding: 2rem 2rem 0 2rem;
     &-inner {
       flex-wrap: wrap;
       justify-content: center;
-      padding: 2rem 2rem 0 2rem;
+      column-gap: 4rem;
+    }
+
+    &__contacts {
+      padding-top: 0;
+    }
+    &__address {
+      padding-top: 0;
     }
 
     &__img {
@@ -103,16 +117,16 @@
   }
 }
 
-@media (max-width: 655px) {
+@media (max-width: 700px) {
   .footer {
     &-inner {
-      padding: 0rem 1.4rem 0 1.4rem;
+      row-gap: 3rem;
     }
 
     &__contacts {
       justify-content: center;
       row-gap: 3rem;
-      margin-bottom: 2.67rem;
+
       &__title {
         @include header3-mobile;
         text-align: center;
@@ -129,7 +143,13 @@
     }
 
     &__img {
-      padding-top: 4.33rem;
+      padding-top: 0rem;
     }
+  }
+}
+
+@media (max-width: 340px) {
+  .footer {
+    padding: 2rem 0.67rem 0 0.67rem;
   }
 }

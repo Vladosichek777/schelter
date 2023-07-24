@@ -3,8 +3,15 @@
   background-image: url(../../../assets/images/start-screen-gradient-background.png);
   background-repeat: no-repeat;
   background-size: cover;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 2.67rem;
+  padding-right: 2.67rem;
+}
+
+@media (max-width: 800px) {
+  .main-background {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }
 
 @media (max-width: 330px) {
