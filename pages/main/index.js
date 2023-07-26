@@ -36,3 +36,28 @@ document.body.addEventListener("click", (e) => {
     nav.classList.remove("header-nav--open");
   }
 });
+
+function activeMenu() {
+  const sections = document.querySelectorAll("[data-section]");
+  const cb = function (entries) {
+    entries.forEach((item) => {
+      if (item.isIntersecting && item.intersectionRatio >= 0.8) {
+        navLinks.forEach((link) => link.classList.remove("header-nav__link--active"));
+
+        let currentSection = item.target.id;
+        let currentMenuLink = document.querySelector(`[href = "#${currentSection}"]`);
+
+        if (currentMenuLink) {
+          currentMenuLink.classList.add("header-nav__link--active");
+        }
+      }
+    });
+  };
+  const options = {
+    threshold: [0.8, 1],
+  };
+  const observer = new IntersectionObserver(cb, options);
+  sections.forEach((section) => observer.observe(section));
+  console.log();
+}
+activeMenu();

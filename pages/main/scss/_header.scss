@@ -72,10 +72,22 @@
 @media (max-width: 750px) {
   .header-nav {
     display: none;
+   
+
 
     &__burger {
       transition: all 0.3s;
-      display: block;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 2rem;
+      height: 2rem;
+
+      div {
+        width: 2rem;
+        height: 2px;
+        background-color: #ffffff;
+      }
     }
   }
 }
@@ -83,7 +95,7 @@
 @media (max-width: 400px) {
   .header {
     max-width: 18.66rem;
-    margin:  0 auto;
+    margin: 0 auto;
   }
 }
 
@@ -99,7 +111,7 @@
   justify-content: center;
   ul.header-nav__list {
     flex-direction: column;
-    gap: 3rem;
+    gap: 2.67rem;
 
     :not(:last-child) {
       margin-right: 0;
