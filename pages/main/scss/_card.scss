@@ -1,0 +1,25 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 2rem;
+  background-color: #fafafa;
+  width: 18rem;
+  cursor: pointer;
+  padding-bottom: 2rem;
+  h4 {
+    @include header4;
+  }
+
+  button {
+    @include button;
+    text-decoration: none;
+    background-color: $buttonBackground-card;
+    border: 2px solid #f1cdb3;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba(253, 220, 196, 1);
+    }
+  }
+}

@@ -1,0 +1,86 @@
+.our-Frineds {
+  &-wrapper {
+    background-color: #f6f6f6;
+  }
+
+  &-inner {
+    padding: 5.33333rem 2.66667rem 6.66667rem 2.66667rem;
+    max-width: 80rem;
+    margin: auto;
+  }
+
+  &__title {
+    max-width: 26.66667rem;
+    @include header3;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  &__slider {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    padding-right: 7rem;
+    padding-left: 7rem;
+    position: relative;
+    height: 29rem;
+    overflow: hidden;
+    &__arrow-prev {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(0, -50%);
+    }
+    &__arrow-next {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translate(0, -50%);
+    }
+
+    &-inner {
+      position: absolute;
+      display: flex;
+      column-gap: 15rem;
+      left: -74rem;
+    }
+  }
+
+  &__button {
+    text-align: center;
+  }
+}
+
+.swipe-right {
+  animation-name: slide-right;
+  animation-duration: 2.5s;
+  animation-play-state: running;
+}
+.swipe-left {
+  animation-name: slide-left;
+  animation-duration: 2.5s;
+}
+
+@keyframes slide-right {
+  from {
+    left: -74rem;
+  }
+  to {
+    left: -155rem;
+  }
+}
+
+@keyframes slide-left {
+  from {
+    left: -74rem;
+  }
+  to {
+    left: 7rem;
+  }
+}
+
+.left,
+.center,
+.right {
+  display: flex;
+  column-gap: 6rem;
+}

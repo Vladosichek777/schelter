@@ -1,0 +1,13 @@
+.arrow {
+  display: inline-flex;
+  padding: 1.53333rem 1.26667rem;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 6.66667rem;
+  border: 2px solid #f1cdb3;
+  cursor: pointer;
+
+  &:hover {
+    background: #fddcc4;
+  }
+}

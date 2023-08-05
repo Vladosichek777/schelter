@@ -4,3 +4,10 @@
     text-decoration: none;
   }
 }
+
+.button--card {
+  @include button;
+  text-decoration: none;
+  background-color: $buttonBackground-card;
+  border: 2px solid #F1CDB3;
+}
